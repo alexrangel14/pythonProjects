@@ -1,0 +1,112 @@
+"""
+# Variables
+price = 10 (int type)
+rating = 4.9 (double type)
+is_published = False (bool type)
+
+name = 'John Smith'
+age = 20
+existing_patient = False
+
+# Type conversion, int(), float(), bool(),
+birth_year = input('Birth year: ')
+age = 2019 - int(birth_year)
+print(age)
+
+# Formatted Strings
+
+# String Functions
+# len(stringVar) -> returns the length of the string
+# stringVar.upper() -> all caps
+# stringVar.lower() -> all lowercase
+# stringVar.find('specificChar') -> returns index of first occurance of char, -1 if dne
+# stringVar.replace('originalSubstringString', 'newSubstringString')
+
+# Arithmetic opeations
+# 10 ** 3 -> 10^3
+
+# if statements
+# if condition or condition and not condition:
+#   do action
+# elif otherCondition > 30:
+#   do action
+# else:
+#   do action
+
+# Comparison operators:
+# <,>,<=,>=,==,!=
+
+# while loops:
+# while condition:
+#   do action
+
+# for loops
+# for item in object:
+#   goes thriugh every single location in onject (i.e. every char in string)
+
+# Lists 
+# print(listName) -> prints every object in the list
+# print(listName[0]) -> prints object at location specified
+# listName.append(number) -> puts number at the end of the list
+# listName.insert(index,value) -> inserts value at the index
+# listName.remove(value) -> removes the value in the list
+# listName.clear() -> removes all from list
+# listName.pop() -> removes last element from list
+# listName.index(value) -> returns first occurance of the value
+# listName.count(value) -> returns number of occurances of value
+# listName.sort() -> sorts the list in ascending
+# listName.reverse() -> reverses the order of the list
+# listName.copy() -> creates a separate copy of the list
+
+# Dictionaries
+# Left hand side are keys and right hand are values
+# customer = {
+    "name": "John Smith",
+    "age": 30,
+    "is_verified": True
+} 
+# customer[key] -> returns value
+# get(key, default = "None") -> returns the value of specified key
+# pop(key) -> remove the element with specific key
+# has_key(key) -> returns true if the dictionary contains the key
+
+# Functions
+def f(x):
+    y = x + 2
+    return y
+f(5)
+
+# Classes
+Ex:
+class Point:
+    # Constructor
+    def __init__(self)
+        self.name = "Name not set"
+
+    # Arg Constructor
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+
+    def move(self):
+        print("move")
+    
+    def draw(self):
+        print("draw)
+    
+pointVariable = Point() -> creates point object and stores in pointVariable
+pointVariable.draw() -> call to draw() method
+pointVariable2 = Point(10,20) -> calls arg constructor
+
+# Modules (files)
+1. Create a new file in the project folder (second.py)
+2. import second
+3. Can now access second.py
+    a. second.method()
+
+# Packages (folders)
+A container with multiple mondules (A folder)
+1. from packageName import moduleName
+2. moduleName.method()
+
+"""
