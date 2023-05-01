@@ -38,4 +38,6 @@ predictions = model.predict(X_test)
 # (7) Evaluate and improve
 # See how well the ml algorithm is able to predict
 score = accuracy_score(y_test,predictions)
+# The score will be printed from 0 - 1 where 0 is 0 %
+# accuarcy and 1 is 100 % accuracy in the prediction
 print(score)
