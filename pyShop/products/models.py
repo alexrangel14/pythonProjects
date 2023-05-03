@@ -8,3 +8,7 @@ class Product(models.Model):
     image_url = models.CharField(max_length=2083)
 
 
+class Offer(models.Model):
+    code = models.CharField(max_length=100)
+    description = models.CharField(max_length=1000)
+    discount = models.FloatField()
