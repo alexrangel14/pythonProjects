@@ -1,20 +1,144 @@
+<!-- 
+  inside "templates": a special directory that django looks at to load
+  templates.
+ -->
+
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Products</h1>
+<!-- <h1></h1>: a big heading -->
+    <h1>Products
+
+      
+    </h1>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap" rel="stylesheet">
+
+    <style>
+      img {
+        width: 100%;
+        /* border-radius: 12px; */
+        border-radius: 12px;
+        height: 214px;
+
+        object-fit: contain;
+      }
+
+      body {
+        background-color: #EAEFF1;
+        font-family: 'Raleway', sans-serif;
+      }
+
+      #container {
+        max-width: 300px;
+        margin: 0 auto;
+
+        margin-top: 20vh;
+      }
+
+      .card {
+        background-color: white;
+        padding: 8px;
+
+        border-radius: 12px;
+
+        border: 1px solid #BACDD8;
+      }
+
+      .tag {
+        padding: 4px 8 px;
+        border: 1px solid #E5EAED;
+
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #788697;
+      }
+
+      .name {
+        font-size: 24px;
+        font-weight: 600;
+
+        margin-top: 16px;
+      }
+
+      p {
+        font-size: 14px;
+        color: #7F8C9B;
+        line-height: 150%;
+      }
+      /* Button functionality details */
+      button {
+        border: none;
+        padding: 12px 24px;
+        border-radius: 50px;
+
+        font-weight: 600;
+        color: #0077FF;
+        background-color: #E0EFFF;
+
+        margin: 0 auto;
+        display: block;
+
+        transition: all 200ms ease-in-out;
+        cursor: pointer;
+      }
+      /* Changes button color on pressing and hovering */
+      button:focus, button:hover {
+        background-color: #0077FF;
+        color: #E0EFFF;
+      }
+
+      .card_details {
+        /* Padding between headers in card */
+        padding: 16px 8px 8px 8px;
+        /* padding: 2px 1px 1px 1px; */
+      }
+
+    </style>
+
     <div class="row">
         {% for product in products %}
-        <div class="col">
-              <div class="card" style="width: 18rem;">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div id="container">
+            <div class="card">
+              <img src="{{ product.image_url }}" alt="alt text">
+
+              <div class="card_details">
+
+                <span class="tag">Nature</span>
+
+                <span class="tag">Lake</span>
+  
+                <div class="name">{{ product.name }}</div>
+  
+                <p>${{ product.price }}</p>
+  
+                <button>Add to cart</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+ <!-- <div class="card" style="width: 18rem;">
                 <img src="{{ product.image_url }}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">{{ product.name }}</h5>
                   <p class="card-text">${{ product.price }}</p>
                   <a href="#" class="btn btn-primary">Add to Cart</a>
                 </div>
-              </div>
-              
-        </div>
-        {% endfor %}
-    </div>
-{% endblock %}
+              </div> -->
+
+              <!-- <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title"> Card title</h5>
+                  <p class="card-text">Some quick text to build on the card title</p>
+                  <a href="#" class="btn btn-primary"> Go Somwehere</a>
+                </div> -->

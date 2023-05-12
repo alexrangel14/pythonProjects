@@ -11,7 +11,29 @@ b. python3 manage.py runserver
 
 --------------------------------------------------------------------
 
+-------------------------- Concepts/Ideas --------------------------
+Difference between root folder versus other folders in the project:
+
+Root folder: Same name as project.
+Additional folders: An app. It ecapsulates a specific functionality
+of your project and are organzied around a specific feature.
+
+--------------------------------------------------------------------
+
 ----------------------- Creating a new path ------------------------
+Explanation/Concept:
+
+Flow: urls.py -> views.py - > yourPage.html
+
+urls.py: Maps url patters to their corresponding view
+
+views.py: Handles incoming HTTP requests and returns HTTP responses.
+
+yourPage.html: The html for how the page will display and is called
+in views.py in the specified function.
+
+Steps to do:
+
 A. Ensure the path to the app is defined inside the urls.py in the 
 root folder and that the url to the app is valid
 i.e. "path('products/', include('products.urls'))," tells django that 
@@ -86,16 +108,5 @@ B. Run the command to make the migrations
 "python3 manage.py makemigrations"
 then
 "python3 manage.py migrate"
-
---------------------------------------------------------------------
-
--------------------------- Concepts/Ideas --------------------------
-Difference between root folder versus other folders in the project:
-
-In a Django project the root folder has the same name as the project
-itself.
-Other folders in the Django project is a Django app inside the
-project. An app encapsulates a specific functionality of your project
-and are orgainized around a specific feature. 
 
 --------------------------------------------------------------------

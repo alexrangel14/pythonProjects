@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
   </head>
-  <body> <nav class="navbar bg-body-tertiary">
-    <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">Navbar</span>
-    </div>
+  <nav>
+    <ul>
+      <!-- The "<a href="/desiredPath/ToFollow>TEXT</a>", specifies the 
+      complete path that you want to follow once the "TEXT" is clicked -->
+        <a href="/products">Home</a>
+        <a href="/products/about/">About</a>
+        <a href="/products/contact/">Contact</a>
+        <a href="/products/cart/">Cart</a>
+    </ul>
   </nav>
   <div class="container">
     {% block content %}
