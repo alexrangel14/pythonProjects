@@ -4,8 +4,113 @@
 
 <title>Shopping Cart</title>
 <h1>Your Cart</h1>
+<div class="card">
 <body>
-    You may be interested in these items
+    You may be interested in these items:
 </body>
+</div>
+
+<style>
+    img {
+      width: 100%;
+      border-radius: 12px;
+      height: 214px;
+      object-fit: contain;
+    }
+
+    body {
+      background-color: #EAEFF1;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    #container {
+      margin: 0 auto;
+      margin-top: 20vh;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: white;
+      padding: 8px;
+      border-radius: 12px;
+      border: 1px solid #BACDD8;
+    }
+
+    .tag {
+      padding: 4px 8px;
+      border: 1px solid #E5EAED;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #788697;
+    }
+
+    .name {
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 16px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #7F8C9B;
+      line-height: 150%;
+    }
+    /* Button functionality details */
+    button {
+      border: none;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: 600;
+      color: #0077FF;
+      background-color: #E0EFFF;
+      margin: 0 auto;
+      display: block;
+      transition: all 200ms ease-in-out;
+      cursor: pointer;
+    }
+    /* Changes button color on pressing and hovering */
+    button:focus, button:hover {
+      background-color: #0077FF;
+      color: #E0EFFF;
+    }
+
+    .card_details {
+      /* Padding between headers in card */
+      /* padding: 16px 8px 8px 8px;  */
+      padding: 2px 1px 1px 1px;
+    }
+
+    .row{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 -15px;
+      margin-bottom: 30px;
+    }
+
+    .col-12,
+    .col-sm-6,
+    .col-md-4{
+      flex: 0 0 auto;
+      width: calc(33.3333% - 30px);
+      padding: 0 15px;
+      margin-bottom: 30px;
+    }
+
+  @media (max-width: 768px) {
+  .col-md-4 {
+    width: calc(50% - 30px);
+  }
+  }
+
+  @media (max-width: 576px) {
+    .col-md-4 {
+      width: 100%;
+    }
+  }
+
+  </style>
 
 {% endblock %}

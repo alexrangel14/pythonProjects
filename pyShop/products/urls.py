@@ -8,7 +8,6 @@ from . import views
 
 # products is the root folder because thats the name of our project.
 
-
 # maps the root url to the view function
 urlpatterns = [
     # path() function:

@@ -11,12 +11,11 @@
 <body>
 
     <h2>Mission</h2>
-
-    <p>
-        We strive for excellence everyday. In the products we provide and
-        in how we serve you. 
-    </p>
-
+    <div class="card">
+        <p>
+            We strive for excellence everyday. In the products we provide and
+            in how we serve you. 
+        </p>
     <p> 
         Our products come from locally sourced farms
         where our strong ties with farmers keep fresh produce on our
@@ -26,7 +25,6 @@
         keeps our products in a high quality state that even high end producers
         have a hard time matching.
     </p>
-
     <p>
         Going grocery shopping is stressful enough, so we want to provide
         the best service possible. This starts with our beleif to treat 
@@ -35,17 +33,17 @@
         That is how we have been awarded best in class service for the last
         3 years. Serving you is our pride and we strive to be the best.
     </p>
-
     <p>
         We know that coming to our store is one of many options and so 
         we thank you and hope you will continue to trust us.
     </p>
-
+    </div>
 </body>
 
 <body>
 
     <h2>History</h2>
+    <div class="card">
     <p>
         We started off as a neighborhood gorcery store where the locals
         knew our employees by name and where the product comes from.
@@ -59,8 +57,112 @@
         towards our customers. If you wish to know where your food is sourced
         from you can use an easy tutorial by us and track down the exact farmer
         that your food has come from.
-    </p>    
+    </p>
+    </div>    
 
 </body>
+
+<style>
+    img {
+      width: 100%;
+      border-radius: 12px;
+      height: 214px;
+      object-fit: contain;
+    }
+
+    body {
+      background-color: #EAEFF1;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    #container {
+      margin: 0 auto;
+      margin-top: 20vh;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: white;
+      padding: 8px;
+      border-radius: 12px;
+      border: 1px solid #BACDD8;
+    }
+
+    .tag {
+      padding: 4px 8px;
+      border: 1px solid #E5EAED;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #788697;
+    }
+
+    .name {
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 16px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #7F8C9B;
+      line-height: 150%;
+    }
+    /* Button functionality details */
+    button {
+      border: none;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: 600;
+      color: #0077FF;
+      background-color: #E0EFFF;
+      margin: 0 auto;
+      display: block;
+      transition: all 200ms ease-in-out;
+      cursor: pointer;
+    }
+    /* Changes button color on pressing and hovering */
+    button:focus, button:hover {
+      background-color: #0077FF;
+      color: #E0EFFF;
+    }
+
+    .card_details {
+      /* Padding between headers in card */
+      /* padding: 16px 8px 8px 8px;  */
+      padding: 2px 1px 1px 1px;
+    }
+
+    .row{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 -15px;
+      margin-bottom: 30px;
+    }
+
+    .col-12,
+    .col-sm-6,
+    .col-md-4{
+      flex: 0 0 auto;
+      width: calc(33.3333% - 30px);
+      padding: 0 15px;
+      margin-bottom: 30px;
+    }
+
+  @media (max-width: 768px) {
+  .col-md-4 {
+    width: calc(50% - 30px);
+  }
+  }
+
+  @media (max-width: 576px) {
+    .col-md-4 {
+      width: 100%;
+    }
+  }
+
+  </style>
 
 {% endblock %}
